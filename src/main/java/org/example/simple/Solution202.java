@@ -41,12 +41,11 @@ public class Solution202 {
 
     public static boolean isHappy(int n) {
         Set<Integer> set = new HashSet<>();
+        //等于1了或者数字循环了就跳出
         while (n != 1 && !set.contains(n)) {
             set.add(n);
             n = getNext(n);
         }
-        System.out.println(n);
-        System.out.println(set);
         return n == 1;
     }
 
