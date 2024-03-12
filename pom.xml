@@ -15,11 +15,11 @@
 
     <dependencies>
 
-        <dependency>
-            <groupId>com.taobao.top</groupId>
-            <artifactId>top-api-sdk-dev</artifactId>
-            <version>auto-kitchen-SNAPSHOT</version>
-        </dependency>
+<!--        <dependency>-->
+<!--            <groupId>com.taobao.top</groupId>-->
+<!--            <artifactId>top-api-sdk-dev</artifactId>-->
+<!--            <version>auto-kitchen-SNAPSHOT</version>-->
+<!--        </dependency>-->
 
         <dependency>
             <groupId>com.google.guava</groupId>
