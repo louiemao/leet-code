@@ -37,7 +37,6 @@ public class Solution130 {
         Solution130 solution = new Solution130();
 
         char[][] board = {{'X', 'X', 'X', 'X'}, {'X', 'O', 'O', 'X'}, {'X', 'X', 'O', 'X'}, {'X', 'O', 'X', 'X'}};
-        //char[][] board = {{'X', 'X', 'X', 'X'}, {'X', 'O', 'O', 'X'}, {'X', 'O', 'X', 'X'}};
         char[][] board2 = {{'X', 'X', 'X', 'X'}, {'X', 'X', 'X', 'X'}, {'X', 'X', 'X', 'X'}, {'X', 'O', 'X', 'X'}};
 
         solution.solve(board);
@@ -50,14 +49,14 @@ public class Solution130 {
         int m = board.length;
         int n = board[0].length;
 
-        //从最外围开始进行广度优先遍历
+        //从最外围开始进行深度优先遍历
         for (int i = 0; i < n; i++) {
-            bfs(board, 0, i);
-            bfs(board, m - 1, i);
+            dfs(board, 0, i);
+            dfs(board, m - 1, i);
         }
         for (int i = 0; i < m; i++) {
-            bfs(board, i, 0);
-            bfs(board, i, n - 1);
+            dfs(board, i, 0);
+            dfs(board, i, n - 1);
         }
 
         //'O'换成'X'，'A'换成'O'
@@ -72,7 +71,7 @@ public class Solution130 {
         }
     }
 
-    public void bfs(char[][] board, int x, int y) {
+    public void dfs(char[][] board, int x, int y) {
         if (x < 0 || x >= board.length || y < 0 || y >= board[0].length) {
             return;
         }
@@ -80,10 +79,10 @@ public class Solution130 {
             return;
         }
         board[x][y] = 'A';
-        bfs(board, x - 1, y);
-        bfs(board, x + 1, y);
-        bfs(board, x, y - 1);
-        bfs(board, x, y + 1);
+        dfs(board, x - 1, y);
+        dfs(board, x + 1, y);
+        dfs(board, x, y - 1);
+        dfs(board, x, y + 1);
     }
 
 }
