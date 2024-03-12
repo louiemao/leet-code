@@ -1,9 +1,7 @@
 package org.example;
 
-import java.util.Comparator;
-import java.util.List;
-
-import com.google.common.collect.Lists;
+import java.util.HashMap;
+import java.util.Map;
 
 /**
  * @author 苍韧
@@ -34,21 +32,37 @@ public class Main {
         //String[] split = str.split("\\|");
         //System.out.println(JSON.toJSONString(split));
 
-        List<TestA> list = Lists.newArrayList();
-        TestA obj = new TestA();
-        obj.setShopCode("aaa");
-        obj.setTransportRoutePriority(null);
-        obj.setTransportRouteWeight(null);
-        list.add(obj);
+        //List<TestA> list = Lists.newArrayList();
+        //TestA obj = new TestA();
+        //obj.setShopCode("aaa");
+        //obj.setTransportRoutePriority(null);
+        //obj.setTransportRouteWeight(null);
+        //list.add(obj);
+        //
+        //TestA obj2 = new TestA();
+        //obj2.setShopCode("bbb");
+        //obj2.setTransportRoutePriority(1);
+        //obj2.setTransportRouteWeight(1);
+        //list.add(obj2);
+        //
+        //list.sort(Comparator.comparing(TestA::getTransportRoutePriority,Comparator.nullsLast(Integer::compareTo))
+        //    .thenComparing(TestA::getTransportRouteWeight,Comparator.nullsLast(Integer::compareTo)));
 
-        TestA obj2 = new TestA();
-        obj2.setShopCode("bbb");
-        obj2.setTransportRoutePriority(1);
-        obj2.setTransportRouteWeight(1);
-        list.add(obj2);
+        //System.out.println( 2000000000 > Integer.MAX_VALUE);
 
-        list.sort(Comparator.comparing(TestA::getTransportRoutePriority,Comparator.nullsLast(Integer::compareTo))
-            .thenComparing(TestA::getTransportRouteWeight,Comparator.nullsLast(Integer::compareTo)));
+        //Set<String> collect = Stream.of("KD0001", "KD0002", "KD0003")
+        //    .skip(1)
+        //    .limit(2)
+        //    .collect(Collectors.toSet());
+        //System.out.println(collect);
+
+        //String str = JSON.toJSONString(true);
+        //List<String> stallCodeList = JSONObject.parseArray(str, String.class);
+        //String lineRoute="*~SH04JG-1N-JCD";
+        //List<String> stepCodeList = Arrays.asList(lineRoute.split("~"));
+
+        Map<String, String> startAndEndMap = new HashMap<>();
+        String s = startAndEndMap.get(null);
 
         System.out.println("Hello world!");
     }
